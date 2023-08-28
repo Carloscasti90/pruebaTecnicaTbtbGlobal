@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Api TBTB Global</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="icon" type="image/png" href="./assets/icono.ico">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+
+<body>
+    <h1 class="titulo1 p-md-2">Colaboradores TBTB Global</h1>
+    <div class="img-fluid">
+        <img src="https://tbtb.global/wp-content/uploads/logo.png" class="img-fluid" alt="logoTbtbGlobal">
+    </div>
+    <div class="table-container ">
+        <h1>Tabla de Usuarios</h1>
+        <div class="group">
+            <input required="" type="text" class="input" id="busquedaUsuarios">
+            <span class="highlight"></span>
+            <span class="bar"></span>
+            <label>Buscar por nombre, correo o ciudad</label>
+        </div>
+        <table id="userTable">
+            <thead>
+                <tr>
+                    <th>Nombre</th>
+                    <th>Correo</th>
+                    <th>Ciudad</th>
+                </tr>
+            </thead>
+            <tbody id="tablaUsuarios">
+            </tbody>
+        </table>
+    </div>
+
+
+    <footer class="footer">
+        © 2023 Todos los derechos reservados. Carlos Castillo
+    </footer>
+    <script src="./api.js"></script>
+</body>
+
+</html>

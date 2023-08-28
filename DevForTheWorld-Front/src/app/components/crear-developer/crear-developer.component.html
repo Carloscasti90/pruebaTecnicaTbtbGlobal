@@ -1,0 +1,95 @@
+<section class="pt-5 container w-75 h-75">
+  <form [formGroup]="developerForm" (ngSubmit)="actualizar_registrar_developer()">
+    <h2 class="d-flex justify-content-center pb-3 fuente1 fw-bold">{{titulo_formulario | uppercase}}</h2>
+    <div class="mb-3 text-center">
+      <label for="nombre" class="form-label fuente2">Nombre</label>
+      <input type="text" class="form-control" id="nombre" formControlName="nombre">
+      <div class="text-danger fw-bold form-text"
+        *ngIf="developerForm.get('nombre')?.hasError('required') && developerForm.get('nombre')?.touched">El nombre es
+        obligatorio</div>
+      <div class="text-danger fw-bold form-text"
+        *ngIf="developerForm.get('nombre')?.hasError('minlength') && developerForm.get('nombre')?.touched">El nombre
+        debe contener mínimo 3 caracteres</div>
+
+    </div>
+    <div class="mb-3 text-center">
+      <label for="primer_apellido" class="form-label fuente2">Primer Apellido</label>
+      <input type="text" class="form-control" id="primer_apellido" formControlName="primer_apellido">
+      <div class="text-danger fw-bold form-text"
+        *ngIf="developerForm.get('primer_apellido')?.hasError('pattern') && developerForm.get('apellido')?.touched">El
+        apellido es obligatorio</div>
+      <div class="text-danger fw-bold form-text"
+        *ngIf="developerForm.get('primer_apellido')?.hasError('minlength') && developerForm.get('apellido')?.touched">El
+        apellido debe contener mínimo 3 caracteres</div>
+    </div>
+    <div class="mb-3 text-center">
+      <label for="segundo_apellido" class="form-label fuente2">Segundo Apellido</label>
+      <input type="text" class="form-control" id="segundo_apellido" formControlName="segundo_apellido">
+      <div class="text-danger fw-bold form-text"
+        *ngIf="developerForm.get('segundo_apellido')?.hasError('required') && developerForm.get('segundo_apellido')?.touched">
+        El apellido es obligatorio</div>
+
+    </div>
+    <div class="mb-3 text-center">
+      <label for="identificacion" class="form-label fuente2">Identificación</label>
+      <input type="text" class="form-control" id="identificacion" formControlName="identificacion">
+      <div class="text-danger fw-bold form-text"
+        *ngIf="developerForm.get('identificacion')?.hasError('pattern') && developerForm.get('identificacion')?.touched">
+        La cantidad contiene caracteres inválidos</div>
+    </div>
+    <div class="mb-3 text-center">
+      <label for="edad" class="form-label fuente2">Edad</label>
+      <input type="text" class="form-control" id="edad" formControlName="edad">
+      <div class="text-danger fw-bold form-text"
+        *ngIf="developerForm.get('edad')?.hasError('pattern') && developerForm.get('edad')?.touched">La cantidad
+        contiene caracteres inválidos</div>
+    </div>
+    <div class="mb-3 text-center">
+      <label for="telefono" class="form-label fuente2">Telefono</label>
+      <input type="text" class="form-control" id="telefono" formControlName="telefono">
+      <div class="text-danger fw-bold form-text"
+        *ngIf="developerForm.get('telefono')?.hasError('pattern') && developerForm.get('telefono')?.touched">La cantidad
+        contiene caracteres inválidos</div>
+    </div>
+    <div class="mb-3 text-center">
+      <label for="tipo_de_desarrollador" class="form-label fuente2">Nivel de desarrollo</label>
+      <input type="text" class="form-control" id="tipo_de_desarrollador" formControlName="tipo_de_desarrollador">
+      <div class="text-danger fw-bold form-text"
+        *ngIf="developerForm.get('tipo_de_desarrollador')?.hasError('required') && developerForm.get('tipo_de_desarrollador')?.touched">
+        La información es obligatoria</div>
+
+    </div>
+    <div class="mb-3 text-center">
+      <label for="correo" class="form-label fuente2">Correo</label>
+      <input type="text" class="form-control" id="correo" formControlName="correo">
+      <div class="text-danger fw-bold form-text"
+        *ngIf="developerForm.get('correo')?.hasError('required') && developerForm.get('correo')?.touched">La información
+        es obligatoria</div>
+      <div class="text-danger fw-bold form-text"
+        *ngIf="developerForm.get('correo')?.hasError('pattern') && developerForm.get('correo')?.touched">La cantidad
+        contiene caracteres inválidos</div>
+
+    </div>
+    <div class="mb-3 text-center">
+      <label for="ciudad" class="form-label fuente2">Ciudad</label>
+      <input type="text" class="form-control" id="ciudad" formControlName="ciudad">
+      <div class="text-danger fw-bold form-text"
+        *ngIf="developerForm.get('ciudad')?.hasError('required') && developerForm.get('ciudad')?.touched">La ciudad es
+        obligatorio</div>
+
+    </div>
+    <div class="mb-3 text-center">
+      <label for="foto_de_perfil" class="form-label fuente2">Foto de perfil</label>
+      <input type="text" class="form-control" id="foto_de_perfil" formControlName="foto_de_perfil">
+      <div class="text-danger fw-bold form-text"
+        *ngIf="developerForm.get('foto_de_perfil')?.hasError('required') && developerForm.get('foto_de_perfil')?.touched">
+        La imagen del perfil es obligatoria </div>
+      <div class="text-danger fw-bold form-text"
+        *ngIf="developerForm.get('foto_de_perfil')?.hasError('pattern') && developerForm.get('foto_de_perfil')?.touched">
+        La URL es invalida</div>
+    </div>
+    <div class="pb-5 d-flex justify-content-center">
+      <button type="submit" class="button2 "> REGISTRAR</button>
+    </div>
+  </form>
+</section>

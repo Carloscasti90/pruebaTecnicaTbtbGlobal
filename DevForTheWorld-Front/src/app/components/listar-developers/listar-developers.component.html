@@ -1,0 +1,40 @@
+<section>
+  <section class="container my-5">
+
+    <h1 class="text-center mb-4 fuente1 fw-bold pb-lg-5">LISTADO DE DESARROLLADORES</h1>
+    <table class="table container w-100 h-75 container-fluid mb-xxl-5">
+      <thead>
+        <tr>
+          <th scope="col">Nombre</th>
+          <th scope="col">Apellido</th>
+          <th scope="col">Identificación</th>
+          <th scope="col">Nivel de desarrollo</th>
+          <th scope="col">Correo</th>
+          <th scope="col">Ciudad</th>
+          <th scope="col">Foto</th>
+          <th scope="col">Acciones</th>
+        </tr>
+      </thead>
+      <tbody *ngFor="let dataDeveloper of listaDevelopers">
+        <tr>
+
+          <td class="">{{ dataDeveloper.nombre}}</td>
+          <td class="">{{ dataDeveloper.primer_apellido}}</td>
+          <td class="">{{ dataDeveloper.identificacion}}</td>
+          <td class="">{{ dataDeveloper.tipo_de_desarrollador}}</td>
+          <td class="">{{ dataDeveloper.correo}}</td>
+          <td class="">{{ dataDeveloper.ciudad}}</td>
+          <td>
+            <img class="w-25" src="{{ dataDeveloper.foto_de_perfil}}" alt="">
+          </td>
+          <td>
+            <button class="btn btn-warning" [routerLink]="['/editar-developer', dataDeveloper._id]">Editar</button>
+            <button class="btn btn-danger" (click)="eliminarDeveloper(dataDeveloper._id)">Eliminar</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+  </section>
+
+</section>
